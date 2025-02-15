@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function typeMessage() {
-        const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid animi officia in odio explicabo quae voluptas nostrum beatae eum, voluptatibus, cupiditate ex dicta incidunt atque, exercitationem blanditiis repellat eveniet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid animi officia in odio explicabo quae voluptas nostrum beatae eum, voluptatibus, cupiditate ex dicta incidunt atque, exercitationem blanditiis repellat eveniet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid animi officia in odio explicabo quae voluptas nostrum beatae eum, voluptatibus, cupiditate ex dicta incidunt atque, exercitationem blanditiis repellat eveniet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid animi officia in odio explicabo quae voluptas nostrum beatae eum, voluptatibus, cupiditate ex dicta incidunt atque, exercitationem blanditiis repellat eveniet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid animi officia in odio explicabo quae voluptas nostrum beatae eum, voluptatibus, cupiditate ex dicta incidunt atque, exercitationem blanditiis repellat eveniet.Querida persona especial,\n\nEspero que esta carta ilumine tu día. Eres increíble y mereces toda la felicidad del mundo.\n\nCon cariño,\nTu persona especial 💖";
+        const text = "ae eum, voluptatibus, clat eveniet.Querida persona especial,\n\nEspero que esta carta ilumine tu día. Eres increíble y mereces toda la felicidad del mundo.\n\nCon cariño,\nTu persona especial 💖";
         let i = 0;
         message.innerHTML = "";
         isTyping = true; // Bloquear clics hasta que termine de escribir
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function addHearts() {
         setInterval(() => {
             let heart = document.createElement("div");
-            heart.innerHTML = "❤️";
+            heart.innerHTML = "💖";
             heart.classList.add("heart-animation");
             heart.style.left = `${Math.random() * 100}%`;
             heart.style.top = `${Math.random() * 100}%`; // Ahora los corazones aparecen en toda la pantalla

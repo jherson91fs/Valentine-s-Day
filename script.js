@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function createHeart() {
         const heart = document.createElement("div");
         heart.classList.add("heart");
-        heart.innerHTML = "❤️";
+        heart.innerHTML = "💖";
         heart.style.left = `${Math.random() * 90 + 5}%`;
         heart.style.top = "-10px";
         heart.addEventListener("click", (event) => handleHeartClick(event));
