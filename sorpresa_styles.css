@@ -297,45 +297,64 @@ body {
     background-color: #ff1a4c;
 }
 
-/* Mensaje de respuesta */
-#response-message {
-    font-size: 24px;
-    margin-top: 15px;
-    color: #ff4081;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(255, 20, 147, 0.5);
-}
-
-/* Formulario de mensaje */
-form {
+#message-form-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 12px;
-    margin-top: 25px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 15px;
+    margin-top: 20px;
+}
+
+#message-form {
+    background: rgba(255, 192, 203, 0.9); /* Fondo rosa suave con transparencia */
+    padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-/* Caja de texto */
-textarea {
-    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
     max-width: 400px;
-    height: 120px;
-    border-radius: 12px;
-    padding: 12px;
-    font-size: 18px;
-    border: 2px solid #ff69b4;
-    font-family: 'Poppins', sans-serif;
-    transition: 0.3s;
-    resize: none;
+    font-family: 'Dancing Script', cursive;
+    color: #a40050;
 }
 
-textarea:focus {
-    border-color: #ff1493;
+#message-form h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #a40050;
+}
+
+#custom-message {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    font-family: 'Dancing Script', cursive;
+    color: #a40050;
+    resize: none;
     outline: none;
-    box-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+}
+
+.form-buttons {
+    margin-top: 15px;
+}
+
+#send-message {
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#send-message:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
 }
