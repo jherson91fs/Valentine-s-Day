@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function typeMessage() {
-        const text = "ae eum, voluptatibus, clat eveniet.Querida persona especial,\n\nEspero que esta carta ilumine tu día. Eres increíble y mereces toda la felicidad del mundo.\n\nCon cariño,\nTu persona especial 💖";
+        const text = "ae eum, volhgfdhgfdhfgdhfgdhfgdhfgdhfgdhfgdhfgdhfgdhfgdhfgdhfgdhgfhfdghfgdhfgdhfgdhfdghuptatibus, clat eveniet.Querida persona especial,\n\nEspero que esta carta ilumine tu día. Eres increíble y mereces toda la felicidad del mundo.\n\nCon cariño,\nTu persona especial 💖";
         let i = 0;
         message.innerHTML = "";
         isTyping = true; // Bloquear clics hasta que termine de escribir
