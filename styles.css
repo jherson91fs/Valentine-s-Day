@@ -1,0 +1,133 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: url('https://img.freepik.com/foto-gratis/marco-vista-superior-mini-corazones-rojos_23-2148257250.jpg?t=st=1739516559~exp=1739520159~hmac=9475fc420e54e327d0245d0f9cd36932fad0b5c933d84de859ea5653b2d61fe1&w=1380') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#counter {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.heart {
+    position: absolute;
+    font-size: 40px;
+    cursor: pointer;
+    animation: fall 3s linear infinite;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-10vh);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.particle {
+    position: absolute;
+    font-size: 20px;
+    color: #ff4081;
+    animation: pop 0.5s ease-out;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+#congrats-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#congrats-message {
+    font-size: 24px;
+    color: #d32f2f;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#surprise-button {
+    display: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s;
+    margin-top: 15px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#surprise-button:hover {
+    background-color: #c2185b;
+}
