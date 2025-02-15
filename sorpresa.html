@@ -3,25 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorpresa</title>
+    <title>Sorpresa Especial</title>
     <link rel="stylesheet" href="sorpresa_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <div id="todo">
+    <div id="hearts-container"></div>
     <div id="envelope-container">
         <div id="envelope">
             <div id="flap"></div>
         </div>
         <div id="letter">
-            <p id="message"></p>
-            <div>
-            <button id="close-button" style="display: none;">Guardar carta</button>
+            <div class="letter-header">Una carta para ti</div>
+            <div id="message"></div>
+            <button id="close-button">Cerrar</button>
+        </div>
+    </div>
+    
+    <div id="message-form-container">
+        <div id="message-form">
+            <h3>Escribe tu mensaje</h3>
+            <textarea id="custom-message" placeholder="Escribe algo especial..."></textarea>
+            <div class="form-buttons">
+                <button id="send-message">Enviar</button>
             </div>
         </div>
     </div>
-    <div id="hearts-container"></div>
-
+    </div>
+    
     <script src="sorpresa_script.js"></script>
-
 </body>
 </html>

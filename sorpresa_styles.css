@@ -7,16 +7,36 @@ body {
     background-color: #ffebee;
     margin: 0;
     overflow: hidden;
+    flex-direction: column; /* Mantiene todo alineado en columna */
+
 }
 
 /* 📌 Contenedor principal */
 #envelope-container {
     position: relative;
     width: 400px;
-    height: 280px;
-    perspective: 1000px;
+    height: 320px; /* Aumentamos el alto */
+    perspective: 1500px; /* Más profundidad para evitar distorsión */
     cursor: pointer;
+    margin-bottom: 20px; /* Espacio entre el sobre y el cuadro de texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+#todo{
+    display: flex;
+    flex-direction: column; /* Alinea el sobre y el formulario en columna */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupar toda la pantalla */
+    
+
+}
+
 
 /* 📌 Sobre */
 #envelope {
@@ -163,4 +183,93 @@ body {
     0% { transform: translateY(0) scale(1); opacity: 1; }
     50% { transform: translateY(-50px) scale(1.2); }
     100% { transform: translateY(-100px) scale(1); opacity: 0; }
+}
+
+#message-form {
+    width: 80%;
+    max-width: 350px; /* Evita que sea demasiado ancho */
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+    position: relative;
+    z-index: 10;
+}
+
+
+#custom-message {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid #ff6699;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: vertical;
+    outline: none;
+    transition: 0.3s;
+    min-height: 80px;
+
+}
+
+#custom-message:focus {
+    border-color: #ff3366;
+    box-shadow: 0px 0px 8px rgba(255, 51, 102, 0.6);
+}
+/* Botón de guardar */
+#save-message {
+    margin-top: 10px;
+    background: #cc0044;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    transform: scale(1.05);
+
+}
+
+#save-message:hover {
+    background: #cc0044;
+    transform: scale(1.05);
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#message-form-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; /* Aumentamos el espacio debajo de la carta */
+}
+
+.form-buttons button {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.form-buttons button:hover {
+    background-color: #ff1a4c;
 }
