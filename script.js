@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         counter.innerText = `Corazones atrapados: ${heartsCaught} / 10`;
         createParticles(x, y);
         event.target.remove();
-        if (heartsCaught === 1) {
+        if (heartsCaught === 10) {
             endGame();
         }
     }
