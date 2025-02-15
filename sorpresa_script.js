@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
                 // Ajustar la altura de la carta en cada iteración
                 letter.style.height = `${message.scrollHeight + 60}px`; // Asegura espacio extra para el texto
-    
+                message.scrollTop = message.scrollHeight; // Desplaza automáticamente hacia abajo
                 setTimeout(typing, 50);
             } else {
                 isTyping = false;
