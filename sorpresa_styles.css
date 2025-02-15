@@ -18,7 +18,7 @@ body {
     height: 320px; /* Aumentamos el alto */
     perspective: 1500px; /* Más profundidad para evitar distorsión */
     cursor: pointer;
-    margin-bottom: 20px; /* Espacio entre el sobre y el cuadro de texto */
+    margin-bottom: 5px; /* Espacio entre el sobre y el cuadro de texto */
     display: flex;
     justify-content: center;
     align-items: center;

@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const heartsContainer = document.getElementById("hearts-container");
 
     let isTyping = false;
+    let isOpen = false; // Estado del sobre
 
     // Ocultar el formulario al inicio
     messageForm.style.display = "none";
@@ -20,9 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
     sendMessageButton.addEventListener("click", sendMessage);
 
     function openLetter() {
-        if (isTyping) return;
+        if (isTyping || isOpen) return;
 
         envelopeContainer.removeEventListener("click", openLetter);
+        isOpen = true;
 
         flap.style.transform = "rotateX(180deg)";
         flap.style.transition = "transform 0.8s ease-in-out";
@@ -39,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             addHearts();
         }, 1000);
+
+        // Ocultar cuadro de texto cuando el sobre se abre
+        messageForm.style.display = "none";
     }
 
     function typeMessage() {
@@ -63,21 +68,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function closeLetter() {
+        if (!isOpen) return;
+
         letter.style.transform = "translateY(100%)";
         letter.style.opacity = "0";
         closeButton.style.display = "none";
         message.innerHTML = "";
-    
+        isOpen = false;
+
         setTimeout(() => {
             envelope.style.transform = "translateY(0)";
             envelope.style.opacity = "1";
             flap.style.transform = "rotateX(0)";
             envelopeContainer.addEventListener("click", openLetter);
         }, 1000);
-    
-        // 🛠 Ajustar el tiempo para mostrar el formulario después de cerrar la carta
+
+        // Mostrar nuevamente el cuadro de texto después de cerrar la carta
         setTimeout(() => {
             messageForm.style.display = "flex";
+            envelopeContainer.style.marginBottom = "50px";
         }, 1200);
     }
 
@@ -127,7 +136,3 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 500);
     }
 });
-
-
-document.getElementById('message-form').style.display = 'flex';
-document.getElementById('envelope-container').style.marginBottom = "50px"; // Agrega espacio cuando se muestra el cuadro
