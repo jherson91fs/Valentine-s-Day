@@ -94,6 +94,7 @@ body {
 
 /* 📌 Contenido del mensaje */
 #message {
+    max-height: 300px; /* Ajusta según necesidad */
     font-size: 18px;
     color: #4e342e;
     line-height: 1.6;
@@ -102,6 +103,9 @@ body {
     max-height: 300px; /* Ajusta según necesidad */
     overflow-y: auto;
     padding-right: 10px; /* Espacio para el scrollbar */
+    word-wrap: break-word; /* Permite que las palabras largas se dividan */
+    white-space: normal; /* Permite que el texto se ajuste en múltiples líneas */
+    text-align: justify; /* Para un mejor formato */
 }
 
 /* 📌 Firma de la carta */
