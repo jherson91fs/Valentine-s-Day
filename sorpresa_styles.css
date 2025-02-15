@@ -93,6 +93,7 @@ body {
     justify-content: center;
     overflow: visible;
     padding-bottom: 40px; /* 🔹 Espacio extra para evitar que el botón lo tape */
+    overflow-y: auto;
 }
 
 /* 📌 Encabezado de la carta */
