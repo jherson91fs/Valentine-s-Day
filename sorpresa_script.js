@@ -104,7 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
             flap.style.transform = "rotateX(0)";
             envelopeContainer.addEventListener("click", openLetter);
             // Restablecer el scroll del mensaje al inicio
-        message.scrollTop = 0;
+            message.scrollTop = 0;
+            letter.scrollTop = 0;
+            // Restablecer el tamaño del contenedor del mensaje
+            letter.style.height = "auto";
         }, 1000);
 
         setTimeout(() => {
