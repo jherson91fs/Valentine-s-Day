@@ -121,10 +121,10 @@ body {
     font-size: 18px;
     color: #4e342e;
     line-height: 1.6;
-    text-align: justify;
+    text-align: justify; 
     white-space: normal;
     max-height: 300px; /* Ajusta según necesidad */
-    overflow-y: hidden;
+    overflow-y: auto;
     padding: 10px; /* Espacio para el scrollbar */
     word-wrap: break-word; /* Permite que las palabras largas se dividan */
     white-space: normal; /* Permite que el texto se ajuste en múltiples líneas */
@@ -132,6 +132,7 @@ body {
     transition: max-height 0.5s ease-in-out;
     margin-bottom: 20px; /* Agrega espacio debajo del mensaje */
     padding-bottom: 50px;
+    padding-right: 5px;
 
 }
 
