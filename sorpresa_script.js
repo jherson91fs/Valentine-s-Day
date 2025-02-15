@@ -25,12 +25,18 @@ document.addEventListener("DOMContentLoaded", () => {
         envelopeContainer.removeEventListener("click", openLetter);
         isOpen = true;
 
+        // 🔹 Restablece la posición y altura del mensaje antes de mostrarlo
+        letter.style.height = "auto"; 
+        letter.scrollTop = 0;
+        message.scrollTop = 0;
         flap.style.transform = "rotateX(180deg)";
         flap.style.transition = "transform 0.8s ease-in-out";
 
         setTimeout(() => {
             envelope.style.transform = "translateY(100px)";
             envelope.style.opacity = "0";
+            envelope.style.transition = "opacity 0.8s ease-in-out, transform 0.8s ease-in-out";
+            letter.style.transform = "translateY(-50px)";
             letter.style.opacity = "1";
             typeMessage();
         }, 800);
